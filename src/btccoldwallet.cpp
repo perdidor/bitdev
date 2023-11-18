@@ -111,7 +111,7 @@ result ShowMasterXPub() {
   Serial.println("");
   HDPrivateKey account = masterkey.derive("m/84'/0'/0'/");
   HDPublicKey xpub = account.xpub();
-  xpub.type = UNKNOWN_TYPE;
+  xpub.type = P2WPKH;
   Serial.println("Root Public Key:");
   Serial.println(xpub);
   Serial.println("Key fingerprint:");
